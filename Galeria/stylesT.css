@@ -4,7 +4,7 @@
         /* Sólo para centrar el formulario a la página */
         align-items: center;
         position: absolute;
-        width: auto;
+        width: 100%;
         /* Para ver el borde del formulario */
         padding: 1em;
         border: 1px solid #CCC;
@@ -30,9 +30,21 @@ body{
 }
 
 .cont{
+    background-image: url(fondo1.jpg);
     display: flex;
 	justify-content: space-around;
-	margin-top: 1rem;
+    margin-top: 1rem;
+ 
+}
+
+.cont1{
+    border: white 8px outset; 
+
+    background-image: url(fondo2.jpg);
+    display: flex;
+	justify-content: space-around;
+    margin-top: 1rem;
+ 
 }
 
 h1{
@@ -40,7 +52,7 @@ h1{
 }
 
 .input, .anterior, .iniciar, .siguiente{
-	background-color: #EFEFEF;
+	background-color:yellow;
 	padding: .5rem;
 	margin: .5rem 0;
 	border: none;

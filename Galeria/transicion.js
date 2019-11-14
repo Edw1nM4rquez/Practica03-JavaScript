@@ -1,13 +1,13 @@
-imagen1 = '<img src="img1.jpg" height="250px" width="250px" />'
-imagen2 = '<img src="img2.jpg" height="250px" width="250px" />'
-imagen3 = '<img src="img3.jpg" height="250px" width="250px" />'
-imagen4 = '<img src="img4.jpg" height="250px" width="250px" />'
-imagen5 = '<img src="img5.jpg" height="250px" width="250px" />'
-imagen6 = '<img src="img6.jpg" height="250px" width="250px" />'
-imagen7 = '<img src="img7.jpg" height="250px" width="250px" />'
-imagen8 = '<img src="img8.jpg" height="250px" width="250px" />'
-imagen9 = '<img src="img9.jpg" height="250px" width="250px" />'
-imagen10 = '<img src="img10.jpg" height="250px" width="250px" />'
+imagen1 = '<img src="img1.jpg" height="400px" width="450px" />'
+imagen2 = '<img src="img2.jpg" height="400px" width="450px" />'
+imagen3 = '<img src="img3.jpg" height="400px" width="450px" />'
+imagen4 = '<img src="img4.jpg" height="400px" width="450px" />'
+imagen5 = '<img src="img5.jpg" height="400px" width="450px" />'
+imagen6 = '<img src="img6.jpg" height="400px" width="450px" />'
+imagen7 = '<img src="img7.jpg" height="400px" width="450px" />'
+imagen8 = '<img src="img8.jpg" height="400px" width="450px" />'
+imagen9 = '<img src="img9.jpg" height="400px" width="450px" />'
+imagen10 = '<img src="img10.jpg" height="400px" width="450px" />'
 
 var fotos = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10];
 
