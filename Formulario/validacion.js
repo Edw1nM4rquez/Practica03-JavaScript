@@ -52,7 +52,7 @@ function validarCamposObligatorios() {
 
     
     if (bandera) { 
-        alert(' SE DAO LA PAGINA WEB!')
+        alert(' CAMPOS VACIOS! Rellenar los campos')
         return false;
     } else {
             return true;
@@ -66,9 +66,9 @@ function ValidarLetras(event, label, elemento) {
     if (letra >= 65 && letra <= 90 || letra >= 97 && letra <= 122 || letra == 32 || letra == 8 || letra == 16) {
         span.style.display = "none";
     } else {
-        span.innerHTML = "Ingrese Letras"
+        span.innerHTML = "Ingrese letras"
         span.style.display = "block"
-        span.style.color = "red"
+        span.style.color = "orange"
         let frase = elemento.value;
         frase = frase.substring(0, frase.length - 1)
         elemento.value = frase
@@ -79,11 +79,30 @@ function ValidarLetras(event, label, elemento) {
     if (wordCount > 2) {
         span.innerHTML = "Ingrese solo dos nombres"
         span.style.display = "block"
-        span.style.color = "red"
+        span.style.color = "orange"
         let frase = elemento.value;
         frase = frase.substring(0, frase.length - 2)
         elemento.value = frase
     }
+}
 
+function ValidarNumeros(event, label, elemento) {
+    let span = document.getElementById(label);
+    let numero = event.which || event.keyCode;
+
+    if (numero >= 48 && numero <= 57) {
+        span.style.display = "none";
+    } else {
+        span.innerHTML = "Ingrese caracteres numericos"
+        span.style.color = "orange"
+        span.style.display = "block"
+        let cantidad = elemento.value;
+        cantidad = cantidad.substring(0, cantidad.length - 1)
+        elemento.value = cantidad
+    }
+
+    if (elemento.value.length === 10) {
+        validar(label, elemento);
+    }
 }
 
