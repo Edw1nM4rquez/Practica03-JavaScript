@@ -73,3 +73,17 @@ function ValidarLetras(event, label, elemento) {
         frase = frase.substring(0, frase.length - 1)
         elemento.value = frase
     }
+
+    let wordCount = elemento.value.trim().replace(/\s+/gi, ' ').split(' ').length;
+
+    if (wordCount > 2) {
+        span.innerHTML = "Ingrese solo dos nombres"
+        span.style.display = "block"
+        span.style.color = "red"
+        let frase = elemento.value;
+        frase = frase.substring(0, frase.length - 2)
+        elemento.value = frase
+    }
+
+}
+
