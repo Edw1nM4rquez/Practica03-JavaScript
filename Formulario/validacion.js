@@ -138,3 +138,113 @@ function validar(label, elemento) {
         }
     }
 }
+
+function ValidarTelefono(event, label, elemento) {
+    let span = document.getElementById(label);
+    let numero = event.which || event.keyCode;
+
+    if (numero >= 48 && numero <= 57) {
+        span.style.display = "none";
+    } else {
+        span.innerHTML = "Ingrese caracteres numericos"
+        span.style.display = "block"
+        span.style.color = "red"
+        let cantidad = elemento.value;
+        cantidad = cantidad.substring(0, cantidad.length - 1)
+        elemento.value = cantidad
+    }
+
+    if (elemento.value.length >= 10) {
+        validar(label, elemento);
+        span.innerHTML = "Solo ingrese diez numeros"
+        span.style.display = "block"
+        span.style.color = "red"
+        let cantidad = elemento.value;
+        cantidad = cantidad.substring(0, cantidad.length - 1)
+        elemento.value = cantidad
+    }
+}
+
+function ValidarCorreo(event, label, elemento) {
+    let span = document.getElementById(label);
+    let caracter = event.which || event.keyCode;
+    let correo = elemento.value;
+    let email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    span.innerHTML = ""
+    span.style.display = "block"
+
+    if (!email.test(correo)) {
+        span.innerHTML = "Correo Invalido"
+        span.style.display = "block"
+        span.style.color = "red"
+
+    } else if (!email.test(correo)) {
+        span.innerHTML = "Correo Invalido"
+        span.style.display = "block"
+        span.style.color = "red"
+
+    } else {
+        span.innerHTML = "Correo Valido"
+        span.style.display = "block"
+        span.style.color = "green"
+
+    }
+
+
+}
+
+function validarFecha(event, label, element) {
+    let span = document.getElementById(label);
+    let caracter = event.which || event.keyCode;
+    let elemento = element.value
+
+    if (validarFormatoFecha(element)) {
+        if (fechaExistente(elemento)) {
+            span.innerHTML = "Fecha Valida"
+            span.style.display = "block"
+            span.style.color = "green"
+        } else {
+            span.innerHTML = "Fecha Invalida"
+            span.style.display = "block"
+            span.style.color = "red"
+        }
+    } else {
+        span.innerHTML = "Formato Invalido"
+        span.style.display = "block"
+        span.style.color = "red";
+    }
+
+    if (elemento.length >= 11) {
+        span.innerHTML = "Fecha fuera de rango"
+        span.style.display = "block"
+        span.style.color = "red"
+        let cantidad = element.value;
+        cantidad = cantidad.substring(0, cantidad.length - 1)
+        element.value = cantidad
+    }
+
+}
+
+function validarFormatoFecha(element) {
+    let elemento = element.value
+    var formato = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+    if ((elemento.match(formato)) && (elemento != '')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function fechaExistente(fecha) {
+    var fechaf = fecha.split("/");
+    var day = fechaf[0];
+    var month = fechaf[1];
+    var year = fechaf[2];
+    var date = new Date(year, month, '0');
+    if ((day - 0) > (date.getDate() - 0)) {
+        return false;
+    }
+    return true;
+}
+
+
