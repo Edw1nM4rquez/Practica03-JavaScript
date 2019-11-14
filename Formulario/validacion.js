@@ -20,6 +20,34 @@ function validarCamposObligatorios() {
                 document.getElementById("mensajeNombres").style.color = "red"
             }
 
+            if (elemento.id == 'apellidos') {
+                apellidos = elemento.id.value;
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeApellidos").innerHTML = "El campo es obligatorio"
+                document.getElementById("mensajeApellidos").style.color = "red"
+            }
+            if (elemento.id == 'direccion') {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeDireccion").innerHTML = "El campo es obligatorio"
+                document.getElementById("mensajeDireccion").style.color = "red"
+            }
+            if (elemento.id == 'telefono') {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeTelefono").innerHTML = "El campo es obligatorio"
+                document.getElementById("mensajeTelefono").style.color = "red"
+            }
+            if (elemento.id == 'fechaNacimiento') {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeFecha").innerHTML = "El campo es obligatorio"
+                document.getElementById("mensajeFecha").style.color = "red"
+            }
+            if (elemento.id == 'correo') {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeCorreo").innerHTML = "El campo es obligatorio"
+                document.getElementById("mensajeCorreo").style.color = "red"
+            }
+
+
         }
     }
 
