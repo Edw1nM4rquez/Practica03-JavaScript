@@ -4,20 +4,27 @@ function validarCamposObligatorios() {
         var elemento = document.forms[0].elements[i];
         if (elemento.value.trim() == '') {
             if (elemento.id == 'cedula') {
-               // elemento.style.border = "1px red solid"
+             elemento.style.border = "1px red solid"
                 document.getElementById("mensajeCedula").innerHTML = "El campo es obligatorio"
                 document.getElementById("mensajeCedula").style.color = "red"
 
 
           }
-		     //elemento.style.border = "1px red solid"
-            bandera = true;
+		     //
+             bandera = true;
+             
+             if (elemento.id == 'nombres') {
+                nombres = elemento.id.value;
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeNombres").innerHTML = "El campo es obligatorio"
+                document.getElementById("mensajeNombres").style.color = "red"
+            }
 
         }
     }
 
-    if (bandera) {
-        alert(' ¡SE DAÑO LA PAGINA WEB!')
+    if (bandera) { 
+        alert(' SE DAO LA PAGINA WEB!')
         return false;
     } else {
         return true;
