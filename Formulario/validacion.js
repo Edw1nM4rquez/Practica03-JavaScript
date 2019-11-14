@@ -10,9 +10,9 @@ function validarCamposObligatorios() {
 
 
           }
-		     //
+		     
              bandera = true;
-             
+
              if (elemento.id == 'nombres') {
                 nombres = elemento.id.value;
                 elemento.style.border = "1px red solid"
