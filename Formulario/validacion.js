@@ -10,8 +10,6 @@ function validarCamposObligatorios() {
 
 
           }
-		     
-             bandera = true;
 
              if (elemento.id == 'nombres') {
                 nombres = elemento.id.value;
@@ -46,16 +44,32 @@ function validarCamposObligatorios() {
                 document.getElementById("mensajeCorreo").innerHTML = "El campo es obligatorio"
                 document.getElementById("mensajeCorreo").style.color = "red"
             }
-
+            bandera = true;
 
         }
+
     }
 
+    
     if (bandera) { 
         alert(' SE DAO LA PAGINA WEB!')
         return false;
     } else {
-        return true;
-    }
-
+            return true;
+            }
 }
+
+function ValidarLetras(event, label, elemento) {
+    let span = document.getElementById(label);
+    let letra = event.which || event.keyCode;
+
+    if (letra >= 65 && letra <= 90 || letra >= 97 && letra <= 122 || letra == 32 || letra == 8 || letra == 16) {
+        span.style.display = "none";
+    } else {
+        span.innerHTML = "Ingrese Letras"
+        span.style.display = "block"
+        span.style.color = "red"
+        let frase = elemento.value;
+        frase = frase.substring(0, frase.length - 1)
+        elemento.value = frase
+    }
