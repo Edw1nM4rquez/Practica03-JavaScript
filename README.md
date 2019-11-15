@@ -118,9 +118,10 @@ placeholder="Ingrese su correo electrónico
 
 1)	a. Se debe validar qué, en el campo de la cedula, se ingrese sólo números y que la misma sea correcta, 
 en base, al último dígito verificador.
+
 -WEB
-
-
+<img src="for/img6.png" >
+<img src="for/img7.png" >
 -JAVASCRIPT
 
 function ValidarNumeros(event, label, elemento) {
