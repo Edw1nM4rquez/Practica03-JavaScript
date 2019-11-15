@@ -8,24 +8,20 @@
 
 
 2.	Crear una carpeta para la solución de cada ejercicio antes mencionado.
+ <img src="for/img2.png" >
  
 3.	Realizar un commit y push por cada requerimiento de los puntos antes descritos. 
+ <img src="for/img3.png" >
  
-
-
-
-
-
-
-
-
 4.	Luego, se debe crear el archivo README del repositorio de GitHub.
+ <img src="for/img4.png" >
  
 5.	Generar los resultados de los requerimientos: 
 A.	1. Diseñar una interfaz en HTML que permita ingresar los siguientes campos en un formulario: cedula, nombres, apellidos, dirección, teléfono, fecha de nacimiento, correo electrónico y contraseña. Luego, usando funciones de JavaScript se pide validar que todos los campos han sido ingresados, además; que los valores ingresados en cada campo del formulario sean correctos teniendo en cuenta las siguientes condiciones:
- 
+<img src="for/img5.png" >
 
 -CODIGO
+
 <!DOCTYPE html>
 <html lang="es">
 
