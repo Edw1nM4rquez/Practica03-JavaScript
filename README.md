@@ -18,6 +18,7 @@
 5.	Generar los resultados de los requerimientos: 
 1. Diseñar una interfaz en HTML que permita ingresar los siguientes campos en un formulario: cedula, nombres, apellidos, dirección, teléfono, fecha de nacimiento, correo electrónico y contraseña. Luego, usando funciones de JavaScript se pide validar que todos los campos han sido ingresados, además; que los valores ingresados en cada campo del formulario sean correctos teniendo en cuenta las siguientes condiciones:
  
+<img src="for/img5.png" >
 
 -CODIGO
 <!DOCTYPE html>
@@ -118,12 +119,9 @@ a. Se debe validar qué, en el campo de la cedula, se ingrese sólo números y q
 en base, al último dígito verificador.
 -WEB
 
+<img src="for/img6.png" >
 
- 
-
- 
-
-
+<img src="for/img7.png" >
 
 -JAVASCRIPT
 function ValidarNumeros(event, label, elemento) {
