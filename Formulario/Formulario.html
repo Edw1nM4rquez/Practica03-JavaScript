@@ -14,27 +14,27 @@
 <body>
         
 
-        <form id="formulario01" action=" " method="POST"
-                onsubmit="return validarCamposObligatorios()">
+        <form id="formulario01" action="php/paso.php" method="POST"
+                onsubmit="return validarCamposObligatorios()" >
                 <br>
                 <br>
                 <label for="cedula">Cedula :</label>
-                <input type="text" id="cedula" name="cedula" value="" maxlength="10"
-                        placeholder="Ingrese el número de cedula ..."
+                <input type="text" id="cedula" name="cedula" value="" maxlength="10" 
+                        placeholder="&#127380;Ingrese el número de cedula ..."
                         onkeypress="ValidarNumeros(event,'mensajeCedula',this)" />
                 <br>
                 <span size=4 id="mensajeCedula"></span>
                 <br>
                 <br>
                 <label for="nombres">Nombres :</label>
-                <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres
+                <input type="text" id="nombres" name="nombres" value="" placeholder="&#128100;Ingrese sus dos nombres
 ..." onkeypress="ValidarLetras(event,'mensajeNombres',this)" />
                 <br>
                 <span id="mensajeNombres"></span>
                 <br>
                 <br>
                 <label for="apellidos">Apelidos :</label>
-                <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos
+                <input type="text" id="apellidos" name="apellidos" value="" placeholder="&#128100;Ingrese sus dos apellidos
 ..." onkeypress="ValidarLetras(event,'mensajeApellidos',this)" />
                 <br>
                 <span id="mensajeApellidos"></span>
@@ -47,7 +47,7 @@
                 <br>
                 <br>
                 <label for="telefono">Teléfono :</label>
-                <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico
+                <input type="text" id="telefono" name="telefono" value="" placeholder="&#128222;Ingrese su número telefónico
 ..." onkeypress="ValidarTelefono(event,'mensajeTelefono',this)" />
                 <br>
                 <span id="mensajeTelefono"></span>
@@ -60,14 +60,14 @@
                 <br>
                 <br>
                 <label for="correo">Correo electrónico :</label>
-                <input type="text" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico
+                <input type="text" id="correo" name="correo" value="" placeholder="&#9993;Ingrese su correo electrónico
 ..." onkeypress="ValidarCorreo(event,'mensajeCorreo',this)" />
                 <br>
                 <span id="mensajeCorreo"></span>
                 <br>
                 <br>
                 <label for="contrasenia">Contraseña :</label>
-                <input type="password" id="contrasenia" name="contrasenia" value="" placeholder="Ingrese su contrasenia
+                <input type="password" id="contrasenia" name="contrasenia" value="" placeholder="&#128272;Ingrese su contrasenia
 ..." onkeypress="ValidarContra(event,'mensajeContra',this)" />
                 <br>
                 <span id="mensajeContra"></span>

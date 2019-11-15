@@ -244,18 +244,20 @@ function fechaExistente(fecha) {
     if ((day - 0) > (date.getDate() - 0)) {
         return false;
     }
-    return true;
+    return true;3
 }
 
 
-function validarContra(event, label, element){
-    let span = document.getElementById(label);
-    let numero = event.which || event.keyCode;
-    contrase=element;
+function ValidarContra(event, label, element){
  
+    let span = document.getElementById(label);
+    contrase=element.value;
+    console.log(contrase.length);
 
     if(contrase.length >= 8)
-			{		
+            {		
+                span.innerHTML = " "
+              
 				var mayuscula = false;
 				var minuscula = false;
 				var numero = false;
@@ -280,14 +282,23 @@ function validarContra(event, label, element){
 						caracter_raro = true;
 					}
 				}
-				if(mayuscula == true && minuscula == true && caracter_raro == true && numero == true)
+                
+                if(mayuscula == true && minuscula == true && caracter_raro == true && numero == true)
 				{
 					return true;
-				}
-			}else{
+				}else{
+                    span.innerHTML = "Ingrese caracteres especiales (@, _, $) "
+                    span.style.color = "orange"
+                    span.style.display = "block"
+                }
+
+			}else if(contrase < 8){
+                
                     span.innerHTML = "Ingrese mas de 8 caracteres"
                     span.style.color = "orange"
                     span.style.display = "block"
+                
+                    
             }
 			return false;
 }
