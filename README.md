@@ -121,13 +121,8 @@ en base, al último dígito verificador.
 -WEB
 
 
- 
-
- 
-
-
-
 -JAVASCRIPT
+
 function ValidarNumeros(event, label, elemento) {
     let span = document.getElementById(label);
     let numero = event.which || event.keyCode;
