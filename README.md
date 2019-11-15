@@ -120,8 +120,11 @@ placeholder="Ingrese su correo electrónico
 en base, al último dígito verificador.
 
 -WEB
+
 <img src="for/img6.png" >
+
 <img src="for/img7.png" >
+
 -JAVASCRIPT
 
 function ValidarNumeros(event, label, elemento) {
