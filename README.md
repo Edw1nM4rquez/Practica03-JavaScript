@@ -182,6 +182,7 @@ function validar(label, elemento) {
 
 
 2)	Se debe validar qué, en el campo del nombre, ingrese mínimo un nombre y que permita ingresar sólo letras.
+
 -WEB
  
 <img src="for/img8.png" >
