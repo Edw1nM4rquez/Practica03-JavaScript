@@ -76,8 +76,8 @@ function ValidarLetras(event, label, elemento) {
 
     let wordCount = elemento.value.trim().replace(/\s+/gi, ' ').split(' ').length;
 
-    if (wordCount > 2) {
-        span.innerHTML = "Ingrese solo dos nombres"
+    if (wordCount > 1) {
+        span.innerHTML = "Ingrese solo un apellido"
         span.style.display = "block"
         span.style.color = "orange"
         let frase = elemento.value;
@@ -248,3 +248,46 @@ function fechaExistente(fecha) {
 }
 
 
+function validarContra(event, label, element){
+    let span = document.getElementById(label);
+    let numero = event.which || event.keyCode;
+    contrase=element;
+ 
+
+    if(contrase.length >= 8)
+			{		
+				var mayuscula = false;
+				var minuscula = false;
+				var numero = false;
+				var caracter_raro = false;
+				
+				for(var i = 0;i<contrase.length;i++)
+				{
+					if(contrase.charCodeAt(i) >= 65 && contrase.charCodeAt(i) <= 90)
+					{
+						mayuscula = true;
+					}
+					else if(contrase.charCodeAt(i) >= 97 && contrase.charCodeAt(i) <= 122)
+					{
+						minuscula = true;
+					}
+					else if(contrase.charCodeAt(i) >= 48 && contrase.charCodeAt(i) <= 57)
+					{
+						numero = true;
+					}
+					else
+					{
+						caracter_raro = true;
+					}
+				}
+				if(mayuscula == true && minuscula == true && caracter_raro == true && numero == true)
+				{
+					return true;
+				}
+			}else{
+                    span.innerHTML = "Ingrese mas de 8 caracteres"
+                    span.style.color = "orange"
+                    span.style.display = "block"
+            }
+			return false;
+}

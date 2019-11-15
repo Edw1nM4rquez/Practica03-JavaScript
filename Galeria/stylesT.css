@@ -19,7 +19,7 @@
 }
 
 body{
-    background-image: url(fondo.jpg);
+    background-image: url(images/fondo.jpg);
     background-size: 100%;
     /* background-repeat: no-repeat; */
     display: flex;
@@ -30,7 +30,7 @@ body{
 }
 
 .cont{
-    background-image: url(fondo1.jpg);
+    background-image: url(images/fondo1.jpg);
     display: flex;
 	justify-content: space-around;
     margin-top: 1rem;
@@ -40,7 +40,7 @@ body{
 .cont1{
     border: white 8px outset; 
 
-    background-image: url(fondo2.jpg);
+    background-image: url(images/fondo2.jpg);
     display: flex;
 	justify-content: space-around;
     margin-top: 1rem;
