@@ -1,294 +1,289 @@
 
-Crear un repositorio en GitHub con el nombre “Practica03 – Javascript”
+1.Crear un repositorio en GitHub con el nombre â€œPractica03 â€“ Javascriptâ€
  
+<img src="for/img1.png" >
 
-
-
-
-
-
-2.	Crear una carpeta para la solución de cada ejercicio antes mencionado.
+2.	Crear una carpeta para la soluciÃ³n de cada ejercicio antes mencionado.
+ 
+ <img src="for/img2.png" >
  
 3.	Realizar un commit y push por cada requerimiento de los puntos antes descritos.
  
-
-
-
-
-
-
-
+<img src="for/img3.png" >
 
 4.	Luego, se debe crear el archivo README del repositorio de GitHub.
  
-5.	Generar los resultados de los requerimientos: 
-1. Diseñar una interfaz en HTML que permita ingresar los siguientes campos en un formulario: cedula, nombres, apellidos, dirección, teléfono, fecha de nacimiento, correo electrónico y contraseña. Luego, usando funciones de JavaScript se pide validar que todos los campos han sido ingresados, además; que los valores ingresados en cada campo del formulario sean correctos teniendo en cuenta las siguientes condiciones:
+ <img src="for/img4.png" >
  
+5.	Generar los resultados de los requerimientos: 
+1. DiseÃ±ar una interfaz en HTML que permita ingresar los siguientes campos en un formulario: cedula, nombres, apellidos, direcciÃ³n, telÃ©fono, fecha de nacimiento, correo electrÃ³nico y contraseÃ±a. Luego, usando funciones de JavaScript se pide validar que todos los campos han sido ingresados, ademÃ¡s; que los valores ingresados en cada campo del formulario sean correctos teniendo en cuenta las siguientes condiciones:
+ 
+<img src="for/img5.png" >
 
 -CODIGO
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPEÂ html>
+<htmlÂ lang="es">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script type="text/javascript" src="validacion.js"></script>
-        <link rel="stylesheet" href="stylesF.css">
-        <title>Document</title>
+Â Â Â Â Â Â Â Â <metaÂ charset="UTF-8">
+Â Â Â Â Â Â Â Â <metaÂ name="viewport"Â content="width=device-width,Â initial-scale=1.0">
+Â Â Â Â Â Â Â Â <metaÂ http-equiv="X-UA-Compatible"Â content="ie=edge">
+Â Â Â Â Â Â Â Â <scriptÂ type="text/javascript"Â src="validacion.js"></script>
+Â Â Â Â Â Â Â Â <linkÂ rel="stylesheet"Â href="stylesF.css">
+Â Â Â Â Â Â Â Â <title>Document</title>
 </head>
 
 <body>
-        
+Â Â Â Â Â Â Â Â 
 
-        <form id="formulario01" action=" " method="POST"
-                onsubmit="return validarCamposObligatorios()">
-                <br>
-                <br>
-                <label for="cedula">Cedula :</label>
-                <input type="text" id="cedula" name="cedula" value="" maxlength="10"
-                        placeholder="Ingrese el número de cedula ..."
-                        onkeypress="ValidarNumeros(event,'mensajeCedula',this)" />
-                <br>
-                <span size=4 id="mensajeCedula"></span>
-                <br>
-                <br>
-                <label for="nombres">Nombres :</label>
-                <input type="text" id="nombres" name="nombres" value="" 
-placeholder="Ingrese sus dos nombres
-..." onkeypress="ValidarLetras(event,'mensajeNombres',this)" />
-                <br>
-                <span id="mensajeNombres"></span>
-                <br>
-                <br>
-                <label for="apellidos">Apelidos :</label>
-                <input type="text" id="apellidos" name="apellidos" value="" 
-placeholder="Ingrese sus dos apellidos
-..." onkeypress="ValidarLetras(event,'mensajeApellidos',this)" />
-                <br>
-                <span id="mensajeApellidos"></span>
-                <br>
-                <br>
-                <label for="direccion">Dirección :</label>
-                <input type="text" id="direccion" name="direccion" value="" 
-placeholder="Ingrese su dirección ..." />
-                <br>
-                <span id="mensajeDireccion"></span>
-                <br>
-                <br>
-                <label for="telefono">Teléfono :</label>
-                <input type="text" id="telefono" name="telefono" value="" 
-placeholder="Ingrese su número telefónico
-..." onkeypress="ValidarTelefono(event,'mensajeTelefono',this)" />
-                <br>
-                <span id="mensajeTelefono"></span>
-                <br>
-                <br>
-                <label for="fecha">Fecha Nacimiento :</label>
-                <input type="text" id="fechaNacimiento" name="fechaNacimiento" value="" 
-placeholder="Ingrese su fecha de nacimiento ..." 
-onkeypress="validarFecha(event, 'mensajeFecha',this)" />
-                <br>
-                <span id="mensajeFecha"></span>
-                <br>
-                <br>
-                <label for="correo">Correo electrónico :</label>
-                <input type="text" id="correo" name="correo" value="" 
-placeholder="Ingrese su correo electrónico
-..." onkeypress="ValidarCorreo(event,'mensajeCorreo',this)" />
-                <br>
-                <span id="mensajeCorreo"></span>
-                <br>
-                <br>
-   <label for="contrasenia">Contraseña :</label>
-                <input type="password" id="contrasenia" name="contrasenia" value=""
- placeholder="Ingrese su contrasenia
-..." onkeypress="ValidarContra(event,'mensajeCorreo',this)" />
-                <br>
-                <span id="mensajeCorreo"></span>
-                <br>
-                <br>
+Â Â Â Â Â Â Â Â <formÂ id="formulario01"Â action="Â "Â method="POST"
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â onsubmit="returnÂ validarCamposObligatorios()">
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <labelÂ for="cedula">CedulaÂ :</label>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="text"Â id="cedula"Â name="cedula"Â value=""Â maxlength="10"
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â placeholder="IngreseÂ elÂ nÃºmeroÂ deÂ cedulaÂ ..."
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â onkeypress="ValidarNumeros(event,'mensajeCedula',this)"Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <spanÂ size=4Â id="mensajeCedula"></span>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <labelÂ for="nombres">NombresÂ :</label>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="text"Â id="nombres"Â name="nombres"Â value=""Â 
+placeholder="IngreseÂ susÂ dosÂ nombres
+..."Â onkeypress="ValidarLetras(event,'mensajeNombres',this)"Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <spanÂ id="mensajeNombres"></span>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <labelÂ for="apellidos">ApelidosÂ :</label>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="text"Â id="apellidos"Â name="apellidos"Â value=""Â 
+placeholder="IngreseÂ susÂ dosÂ apellidos
+..."Â onkeypress="ValidarLetras(event,'mensajeApellidos',this)"Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <spanÂ id="mensajeApellidos"></span>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <labelÂ for="direccion">DirecciÃ³nÂ :</label>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="text"Â id="direccion"Â name="direccion"Â value=""Â 
+placeholder="IngreseÂ suÂ direcciÃ³nÂ ..."Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <spanÂ id="mensajeDireccion"></span>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <labelÂ for="telefono">TelÃ©fonoÂ :</label>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="text"Â id="telefono"Â name="telefono"Â value=""Â 
+placeholder="IngreseÂ suÂ nÃºmeroÂ telefÃ³nico
+..."Â onkeypress="ValidarTelefono(event,'mensajeTelefono',this)"Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <spanÂ id="mensajeTelefono"></span>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <labelÂ for="fecha">FechaÂ NacimientoÂ :</label>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="text"Â id="fechaNacimiento"Â name="fechaNacimiento"Â value=""Â 
+placeholder="IngreseÂ suÂ fechaÂ deÂ nacimientoÂ ..."Â 
+onkeypress="validarFecha(event,Â 'mensajeFecha',this)"Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <spanÂ id="mensajeFecha"></span>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <labelÂ for="correo">CorreoÂ electrÃ³nicoÂ :</label>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="text"Â id="correo"Â name="correo"Â value=""Â 
+placeholder="IngreseÂ suÂ correoÂ electrÃ³nico
+..."Â onkeypress="ValidarCorreo(event,'mensajeCorreo',this)"Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <spanÂ id="mensajeCorreo"></span>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â <labelÂ for="contrasenia">ContraseÃ±aÂ :</label>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="password"Â id="contrasenia"Â name="contrasenia"Â value=""
+Â placeholder="IngreseÂ suÂ contrasenia
+..."Â onkeypress="ValidarContra(event,'mensajeCorreo',this)"Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <spanÂ id="mensajeCorreo"></span>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <br>
 
-                <div class="form_boton"> 
-                        <input type="submit" class="ingresar" id="crear"
- name="crear" value="Aceptar" />
-                </div>
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <divÂ class="form_boton">Â 
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <inputÂ type="submit"Â class="ingresar"Â id="crear"
+Â name="crear"Â value="Aceptar"Â />
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </div>
 
-        </form>
-        
+Â Â Â Â Â Â Â Â </form>
+Â Â Â Â Â Â Â Â 
 </body>
 
 </html>
 
-a. Se debe validar qué, en el campo de la cedula, se ingrese sólo números y que la misma sea correcta, 
-en base, al último dígito verificador.
+a. Se debe validar quÃ©, en el campo de la cedula, se ingrese sÃ³lo nÃºmeros y que la misma sea correcta, 
+en base, al Ãºltimo dÃ­gito verificador.
 -WEB
 
+<img src="for/img6.png" >
 
- 
-
- 
-
-
+<img src="for/img7.png" >
 
 -JAVASCRIPT
-function ValidarNumeros(event, label, elemento) {
-    let span = document.getElementById(label);
-    let numero = event.which || event.keyCode;
+functionÂ ValidarNumeros(event,Â label,Â elemento)Â {
+Â Â Â Â letÂ spanÂ =Â document.getElementById(label);
+Â Â Â Â letÂ numeroÂ =Â event.whichÂ ||Â event.keyCode;
 
-    if (numero >= 48 && numero <= 57) {
-        span.style.display = "none";
-    } else {
-        span.innerHTML = "Ingrese caracteres numericos"
-        span.style.color = "orange"
-        span.style.display = "block"
-        let cantidad = elemento.value;
-        cantidad = cantidad.substring(0, cantidad.length - 1)
-        elemento.value = cantidad
-    }
+Â Â Â Â ifÂ (numeroÂ >=Â 48Â &&Â numeroÂ <=Â 57)Â {
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "none";
+Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "IngreseÂ caracteresÂ numericos"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "orange"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â letÂ cantidadÂ =Â elemento.value;
+Â Â Â Â Â Â Â Â cantidadÂ =Â cantidad.substring(0,Â cantidad.lengthÂ -Â 1)
+Â Â Â Â Â Â Â Â elemento.valueÂ =Â cantidad
+Â Â Â Â }
 
-    if (elemento.value.length === 10) {
-        validar(label, elemento);
-    }
+Â Â Â Â ifÂ (elemento.value.lengthÂ ===Â 10)Â {
+Â Â Â Â Â Â Â Â validar(label,Â elemento);
+Â Â Â Â }
 }
 
-function validar(label, elemento) {
-    cedula = elemento.value;
-    let span = document.getElementById(label);
-    var cad = cedula.trim();
-    var total = 0;
-    var longitud = cad.length;
-    var longcheck = longitud - 1;
+functionÂ validar(label,Â elemento)Â {
+Â Â Â Â cedulaÂ =Â elemento.value;
+Â Â Â Â letÂ spanÂ =Â document.getElementById(label);
+Â Â Â Â varÂ cadÂ =Â cedula.trim();
+Â Â Â Â varÂ totalÂ =Â 0;
+Â Â Â Â varÂ longitudÂ =Â cad.length;
+Â Â Â Â varÂ longcheckÂ =Â longitudÂ -Â 1;
 
-    if (cad !== "" && longitud === 10) {
-        for (i = 0; i < longcheck; i++) {
-            if (i % 2 === 0) {
-                var aux = cad.charAt(i) * 2;
-                if (aux > 9) aux -= 9;
-                total += aux;
-            } else {
-                total += parseInt(cad.charAt(i));
-            }
-        }
+Â Â Â Â ifÂ (cadÂ !==Â ""Â &&Â longitudÂ ===Â 10)Â {
+Â Â Â Â Â Â Â Â forÂ (iÂ =Â 0;Â iÂ <Â longcheck;Â i++)Â {
+Â Â Â Â Â Â Â Â Â Â Â Â ifÂ (iÂ %Â 2Â ===Â 0)Â {
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â varÂ auxÂ =Â cad.charAt(i)Â *Â 2;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â ifÂ (auxÂ >Â 9)Â auxÂ -=Â 9;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â totalÂ +=Â aux;
+Â Â Â Â Â Â Â Â Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â totalÂ +=Â parseInt(cad.charAt(i));
+Â Â Â Â Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â }
 
-        total = total % 10 ? 10 - total % 10 : 0;
+Â Â Â Â Â Â Â Â totalÂ =Â totalÂ %Â 10Â ?Â 10Â -Â totalÂ %Â 10Â :Â 0;
 
-        if (cad.charAt(longitud - 1) == total) {
-            span.innerHTML = "Cedula Válida";
-            span.style.display = "block"
-            span.style.color = "green"
-        } else {
-            span.innerHTML = "Cedula Inválida";
-            span.style.display = "block"
-            span.style.color = "red"
-        }
-    }
+Â Â Â Â Â Â Â Â ifÂ (cad.charAt(longitudÂ -Â 1)Â ==Â total)Â {
+Â Â Â Â Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "CedulaÂ VÃ¡lida";
+Â Â Â Â Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â Â Â Â Â span.style.colorÂ =Â "green"
+Â Â Â Â Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "CedulaÂ InvÃ¡lida";
+Â Â Â Â Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â Â Â Â Â span.style.colorÂ =Â "red"
+Â Â Â Â Â Â Â Â }
+Â Â Â Â }
 }
 
 
-2)	Se debe validar qué, en el campo del nombre, ingrese mínimo un nombre y que permita ingresar sólo letras.
+2)	Se debe validar quÃ©, en el campo del nombre, ingrese mÃ­nimo un nombre y que permita ingresar sÃ³lo letras.
+
+-WEB
+ 
+ <img src="for/img8.png" >
+
+<img src="for/img9.png" >
+
+-JAVASCRIPT
+
+functionÂ ValidarLetras(event,Â label,Â elemento)Â {
+Â Â Â Â letÂ spanÂ =Â document.getElementById(label);
+Â Â Â Â letÂ letraÂ =Â event.whichÂ ||Â event.keyCode;
+
+Â Â Â Â ifÂ (letraÂ >=Â 65Â &&Â letraÂ <=Â 90Â ||Â letraÂ >=Â 97Â &&Â letraÂ <=Â 122Â ||Â letraÂ ==Â 32Â ||
+    Â letraÂ ==Â 8Â ||Â letraÂ ==Â 16)Â {
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "none";
+Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "IngreseÂ letras"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "orange"
+Â Â Â Â Â Â Â Â letÂ fraseÂ =Â elemento.value;
+Â Â Â Â Â Â Â Â fraseÂ =Â frase.substring(0,Â frase.lengthÂ -Â 1)
+Â Â Â Â Â Â Â Â elemento.valueÂ =Â frase
+Â Â Â Â }
+
+Â Â Â Â letÂ wordCountÂ =Â elemento.value.trim().replace(/\s+/gi,Â 'Â ').split('Â ').length;
+
+Â Â Â Â ifÂ (wordCountÂ >Â 1)Â {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "IngreseÂ soloÂ unÂ nombre"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "orange"
+Â Â Â Â Â Â Â Â letÂ fraseÂ =Â elemento.value;
+Â Â Â Â Â Â Â Â fraseÂ =Â frase.substring(0,Â frase.lengthÂ -Â 2)
+Â Â Â Â Â Â Â Â elemento.valueÂ =Â frase
+Â Â Â Â }
+}
+
+3)	Se debe validar quÃ©, en el campo del apellido, ingrese mÃ­nimo un
+apellido y que permita ingresar sÃ³lo letras.
 -WEB
  
 
+
  
+
 -JAVASCRIPT
+functionÂ ValidarLetras(event,Â label,Â elemento)Â {
+Â Â Â Â letÂ spanÂ =Â document.getElementById(label);
+Â Â Â Â letÂ letraÂ =Â event.whichÂ ||Â event.keyCode;
 
-function ValidarLetras(event, label, elemento) {
-    let span = document.getElementById(label);
-    let letra = event.which || event.keyCode;
+Â Â Â Â ifÂ (letraÂ >=Â 65Â &&Â letraÂ <=Â 90Â ||Â letraÂ >=Â 97Â &&Â letraÂ <=Â 122Â ||Â letraÂ ==Â 32Â ||
+    Â letraÂ ==Â 8Â ||Â letraÂ ==Â 16)Â {
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "none";
+Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "IngreseÂ letras"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "orange"
+Â Â Â Â Â Â Â Â letÂ fraseÂ =Â elemento.value;
+Â Â Â Â Â Â Â Â fraseÂ =Â frase.substring(0,Â frase.lengthÂ -Â 1)
+Â Â Â Â Â Â Â Â elemento.valueÂ =Â frase
+Â Â Â Â }
 
-    if (letra >= 65 && letra <= 90 || letra >= 97 && letra <= 122 || letra == 32 ||
-     letra == 8 || letra == 16) {
-        span.style.display = "none";
-    } else {
-        span.innerHTML = "Ingrese letras"
-        span.style.display = "block"
-        span.style.color = "orange"
-        let frase = elemento.value;
-        frase = frase.substring(0, frase.length - 1)
-        elemento.value = frase
-    }
+Â Â Â Â letÂ wordCountÂ =Â elemento.value.trim().replace(/\s+/gi,Â 'Â ').split('Â ').length;
 
-    let wordCount = elemento.value.trim().replace(/\s+/gi, ' ').split(' ').length;
-
-    if (wordCount > 1) {
-        span.innerHTML = "Ingrese solo un nombre"
-        span.style.display = "block"
-        span.style.color = "orange"
-        let frase = elemento.value;
-        frase = frase.substring(0, frase.length - 2)
-        elemento.value = frase
-    }
+Â Â Â Â ifÂ (wordCountÂ >Â 1)Â {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "IngreseÂ soloÂ unÂ apellido"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "orange"
+Â Â Â Â Â Â Â Â letÂ fraseÂ =Â elemento.value;
+Â Â Â Â Â Â Â Â fraseÂ =Â frase.substring(0,Â frase.lengthÂ -Â 2)
+Â Â Â Â Â Â Â Â elemento.valueÂ =Â frase
+Â Â Â Â }
 }
 
-3)	Se debe validar qué, en el campo del apellido, ingrese mínimo un
-apellido y que permita ingresar sólo letras.
--WEB
- 
-
-
- 
-
--JAVASCRIPT
-function ValidarLetras(event, label, elemento) {
-    let span = document.getElementById(label);
-    let letra = event.which || event.keyCode;
-
-    if (letra >= 65 && letra <= 90 || letra >= 97 && letra <= 122 || letra == 32 ||
-     letra == 8 || letra == 16) {
-        span.style.display = "none";
-    } else {
-        span.innerHTML = "Ingrese letras"
-        span.style.display = "block"
-        span.style.color = "orange"
-        let frase = elemento.value;
-        frase = frase.substring(0, frase.length - 1)
-        elemento.value = frase
-    }
-
-    let wordCount = elemento.value.trim().replace(/\s+/gi, ' ').split(' ').length;
-
-    if (wordCount > 1) {
-        span.innerHTML = "Ingrese solo un apellido"
-        span.style.display = "block"
-        span.style.color = "orange"
-        let frase = elemento.value;
-        frase = frase.substring(0, frase.length - 2)
-        elemento.value = frase
-    }
-}
-
-4)	Se debe validar qué, en el campo del teléfono, permita ingresar sólo
-números y un máximo de 10.-WEB
+4)	Se debe validar quÃ©, en el campo del telÃ©fono, permita ingresar sÃ³lo
+nÃºmeros y un mÃ¡ximo de 10.-WEB
 
  
 
 -JAVASCRIPT
 
-function ValidarTelefono(event, label, elemento) {
-    let span = document.getElementById(label);
-    let numero = event.which || event.keyCode;
+functionÂ ValidarTelefono(event,Â label,Â elemento)Â {
+Â Â Â Â letÂ spanÂ =Â document.getElementById(label);
+Â Â Â Â letÂ numeroÂ =Â event.whichÂ ||Â event.keyCode;
 
-    if (numero >= 48 && numero <= 57) {
-        span.style.display = "none";
-    } else {
-        span.innerHTML = "Ingrese caracteres numericos"
-        span.style.display = "block"
-        span.style.color = "red"
-        let cantidad = elemento.value;
-        cantidad = cantidad.substring(0, cantidad.length - 1)
-        elemento.value = cantidad
-    }
+Â Â Â Â ifÂ (numeroÂ >=Â 48Â &&Â numeroÂ <=Â 57)Â {
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "none";
+Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "IngreseÂ caracteresÂ numericos"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "red"
+Â Â Â Â Â Â Â Â letÂ cantidadÂ =Â elemento.value;
+Â Â Â Â Â Â Â Â cantidadÂ =Â cantidad.substring(0,Â cantidad.lengthÂ -Â 1)
+Â Â Â Â Â Â Â Â elemento.valueÂ =Â cantidad
+Â Â Â Â }
 
-    if (elemento.value.length >= 10) {
-        validar(label, elemento);
-        span.innerHTML = "Solo ingrese diez numeros"
-        span.style.display = "block"
-        span.style.color = "red"
-        let cantidad = elemento.value;
-        cantidad = cantidad.substring(0, cantidad.length - 1)
-        elemento.value = cantidad
-    }
+Â Â Â Â ifÂ (elemento.value.lengthÂ >=Â 10)Â {
+Â Â Â Â Â Â Â Â validar(label,Â elemento);
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "SoloÂ ingreseÂ diezÂ numeros"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "red"
+Â Â Â Â Â Â Â Â letÂ cantidadÂ =Â elemento.value;
+Â Â Â Â Â Â Â Â cantidadÂ =Â cantidad.substring(0,Â cantidad.lengthÂ -Â 1)
+Â Â Â Â Â Â Â Â elemento.valueÂ =Â cantidad
+Â Â Â Â }
 }
 
 
@@ -301,410 +296,410 @@ dd/mm/yyyy.
 
 -JAVASCRIPT
 
-function validarFecha(event, label, element) {
-    let span = document.getElementById(label);
-    let caracter = event.which || event.keyCode;
-    let elemento = element.value
+functionÂ validarFecha(event,Â label,Â element)Â {
+Â Â Â Â letÂ spanÂ =Â document.getElementById(label);
+Â Â Â Â letÂ caracterÂ =Â event.whichÂ ||Â event.keyCode;
+Â Â Â Â letÂ elementoÂ =Â element.value
 
-    if (validarFormatoFecha(element)) {
-        if (fechaExistente(elemento)) {
-            span.innerHTML = "Fecha Valida"
-            span.style.display = "block"
-            span.style.color = "green"
-        } else {
-            span.innerHTML = "Fecha Invalida"
-            span.style.display = "block"
-            span.style.color = "red"
-        }
-    } else {
-        span.innerHTML = "Formato Invalido"
-        span.style.display = "block"
-        span.style.color = "red";
-    }
+Â Â Â Â ifÂ (validarFormatoFecha(element))Â {
+Â Â Â Â Â Â Â Â ifÂ (fechaExistente(elemento))Â {
+Â Â Â Â Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "FechaÂ Valida"
+Â Â Â Â Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â Â Â Â Â span.style.colorÂ =Â "green"
+Â Â Â Â Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "FechaÂ Invalida"
+Â Â Â Â Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â Â Â Â Â span.style.colorÂ =Â "red"
+Â Â Â Â Â Â Â Â }
+Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "FormatoÂ Invalido"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "red";
+Â Â Â Â }
 
-    if (elemento.length >= 11) {
-        span.innerHTML = "Fecha fuera de rango"
-        span.style.display = "block"
-        span.style.color = "red"
-        let cantidad = element.value;
-        cantidad = cantidad.substring(0, cantidad.length - 1)
-        element.value = cantidad
-    }
+Â Â Â Â ifÂ (elemento.lengthÂ >=Â 11)Â {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "FechaÂ fueraÂ deÂ rango"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "red"
+Â Â Â Â Â Â Â Â letÂ cantidadÂ =Â element.value;
+Â Â Â Â Â Â Â Â cantidadÂ =Â cantidad.substring(0,Â cantidad.lengthÂ -Â 1)
+Â Â Â Â Â Â Â Â element.valueÂ =Â cantidad
+Â Â Â Â }
 
 }
 
-function validarFormatoFecha(element) {
-    let elemento = element.value
-    var formato = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
-    if ((elemento.match(formato)) && (elemento != '')) {
-        return true;
-    } else {
-        return false;
-    }
+functionÂ validarFormatoFecha(element)Â {
+Â Â Â Â letÂ elementoÂ =Â element.value
+Â Â Â Â varÂ formatoÂ =Â /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+Â Â Â Â ifÂ ((elemento.match(formato))Â &&Â (elementoÂ !=Â ''))Â {
+Â Â Â Â Â Â Â Â returnÂ true;
+Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â returnÂ false;
+Â Â Â Â }
 }
 
-function fechaExistente(fecha) {
-    var fechaf = fecha.split("/");
-    var day = fechaf[0];
-    var month = fechaf[1];
-    var year = fechaf[2];
-    var date = new Date(year, month, '0');
-    if ((day - 0) > (date.getDate() - 0)) {
-        return false;
-    }
-    return true;
+functionÂ fechaExistente(fecha)Â {
+Â Â Â Â varÂ fechafÂ =Â fecha.split("/");
+Â Â Â Â varÂ dayÂ =Â fechaf[0];
+Â Â Â Â varÂ monthÂ =Â fechaf[1];
+Â Â Â Â varÂ yearÂ =Â fechaf[2];
+Â Â Â Â varÂ dateÂ =Â newÂ Date(year,Â month,Â '0');
+Â Â Â Â ifÂ ((dayÂ -Â 0)Â >Â (date.getDate()Â -Â 0))Â {
+Â Â Â Â Â Â Â Â returnÂ false;
+Â Â Â Â }
+Â Â Â Â returnÂ true;
 }
 
-6)	Se debe validar qué, en el campo correo electrónico, permita ingresar un
-correo válido. Se considera un correo válido, cuando comienza por tres o
-más valores alfanuméricos, luego un @, seguido por la extensión
-“ups.edu.ec” o “est.ups.edu.ec”.
+6)	Se debe validar quÃ©, en el campo correo electrÃ³nico, permita ingresar un
+correo vÃ¡lido. Se considera un correo vÃ¡lido, cuando comienza por tres o
+mÃ¡s valores alfanumÃ©ricos, luego un @, seguido por la extensiÃ³n
+â€œups.edu.ecâ€ o â€œest.ups.edu.ecâ€.
 -WEB
  
 
 -JAVASCRIPT
 
-function ValidarCorreo(event, label, elemento) {
-    let span = document.getElementById(label);
-    let caracter = event.which || event.keyCode;
-    let correo = elemento.value;
-    let email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-    span.innerHTML = ""
-    span.style.display = "block"
+functionÂ ValidarCorreo(event,Â label,Â elemento)Â {
+Â Â Â Â letÂ spanÂ =Â document.getElementById(label);
+Â Â Â Â letÂ caracterÂ =Â event.whichÂ ||Â event.keyCode;
+Â Â Â Â letÂ correoÂ =Â elemento.value;
+Â Â Â Â letÂ emailÂ =Â /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+Â Â Â Â span.innerHTMLÂ =Â ""
+Â Â Â Â span.style.displayÂ =Â "block"
 
-    if (!email.test(correo)) {
-        span.innerHTML = "Correo Invalido"
-        span.style.display = "block"
-        span.style.color = "red"
+Â Â Â Â ifÂ (!email.test(correo))Â {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "CorreoÂ Invalido"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "red"
 
-    } else if (!email.test(correo)) {
-        span.innerHTML = "Correo Invalido"
-        span.style.display = "block"
-        span.style.color = "red"
+Â Â Â Â }Â elseÂ ifÂ (!email.test(correo))Â {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "CorreoÂ Invalido"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "red"
 
-    } else {
-        span.innerHTML = "Correo Valido"
-        span.style.display = "block"
-        span.style.color = "green"
+Â Â Â Â }Â elseÂ {
+Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "CorreoÂ Valido"
+Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â span.style.colorÂ =Â "green"
 
-    }
+Â Â Â Â }
 
 }
 
 
-7)	Se debe validar que la contraseña ingresada tenga mínimo 8 caracteres, además, debe incluir al menos: una letra mayúscula, una letra minúscula y un carácter especial (@, _, $)}
+7)	Se debe validar que la contraseÃ±a ingresada tenga mÃ­nimo 8 caracteres, ademÃ¡s, debe incluir al menos: una letra mayÃºscula, una letra minÃºscula y un carÃ¡cter especial (@, _, $)}
 -WEB
  
 
  
 
 -JAVASCRIPT
-function ValidarContra(event, label, element){
- 
-    let span = document.getElementById(label);
-    contrase=element.value;
-    console.log(contrase.length);
+functionÂ ValidarContra(event,Â label,Â element){
+Â 
+Â Â Â Â letÂ spanÂ =Â document.getElementById(label);
+Â Â Â Â contrase=element.value;
+Â Â Â Â console.log(contrase.length);
 
-    if(contrase.length >= 8)
-            {       
-                span.innerHTML = " "
-              
-                var mayuscula = false;
-                var minuscula = false;
-                var numero = false;
-                var caracter_raro = false;
-                
-                for(var i = 0;i<contrase.length;i++)
-                {
-                    if(contrase.charCodeAt(i) >= 65 && contrase.charCodeAt(i) <= 90)
-                    {
-                        mayuscula = true;
-                    }
-                    else if(contrase.charCodeAt(i) >= 97 && contrase.charCodeAt(i) <= 122)
-                    {
-                        minuscula = true;
-                    }
-                    else if(contrase.charCodeAt(i) >= 48 && contrase.charCodeAt(i) <= 57)
-                    {
-                        numero = true;
-                    }
-                    else
-                    {
-                        caracter_raro = true;
-                    }
-                }
-                
-                if(mayuscula == true && minuscula == true && caracter_raro == true && numero == true)
-                {
-                    return true;
-                }else{
-                    span.innerHTML = "Ingrese caracteres especiales (@, _, $) "
-                    span.style.color = "orange"
-                    span.style.display = "block"
-                }
+Â Â Â Â if(contrase.lengthÂ >=Â 8)
+Â Â Â Â Â Â Â Â Â Â Â Â {Â Â Â Â Â Â Â 
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "Â "
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â varÂ mayusculaÂ =Â false;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â varÂ minusculaÂ =Â false;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â varÂ numeroÂ =Â false;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â varÂ caracter_raroÂ =Â false;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â for(varÂ iÂ =Â 0;i<contrase.length;i++)
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â {
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â if(contrase.charCodeAt(i)Â >=Â 65Â &&Â contrase.charCodeAt(i)Â <=Â 90)
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â {
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â mayusculaÂ =Â true;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â elseÂ if(contrase.charCodeAt(i)Â >=Â 97Â &&Â contrase.charCodeAt(i)Â <=Â 122)
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â {
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â minusculaÂ =Â true;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â elseÂ if(contrase.charCodeAt(i)Â >=Â 48Â &&Â contrase.charCodeAt(i)Â <=Â 57)
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â {
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â numeroÂ =Â true;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â else
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â {
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â caracter_raroÂ =Â true;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â if(mayusculaÂ ==Â trueÂ &&Â minusculaÂ ==Â trueÂ &&Â caracter_raroÂ ==Â trueÂ &&Â numeroÂ ==Â true)
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â {
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â returnÂ true;
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â }else{
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "IngreseÂ caracteresÂ especialesÂ (@,Â _,Â $)Â "
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â span.style.colorÂ =Â "orange"
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â }
 
-            }else if(contrase < 8){
-                
-                    span.innerHTML = "Ingrese mas de 8 caracteres"
-                    span.style.color = "orange"
-                    span.style.display = "block"
-                
-                    
-            }
-            return false;
+Â Â Â Â Â Â Â Â Â Â Â Â }elseÂ if(contraseÂ <Â 8){
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â span.innerHTMLÂ =Â "IngreseÂ masÂ deÂ 8Â caracteres"
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â span.style.colorÂ =Â "orange"
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â span.style.displayÂ =Â "block"
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+Â Â Â Â Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â Â Â Â Â returnÂ false;
 }
                             
-8)	Las demás validaciones se realizarán al momento de “enviar” (submit) la información del formulario hacia una página php. Si no cumple las validaciones, se mostrará un mensaje debajo de cada campo con el error y se pintará el campo con un borde rojo que representará que el campo tiene un error. Si se cumple las validaciones, se enviará a una página php, en donde se mostrará únicamente un mensaje que diga “Bienvenido, ¡pasaste las validaciones!”. 
+8)	Las demÃ¡s validaciones se realizarÃ¡n al momento de â€œenviarâ€ (submit) la informaciÃ³n del formulario hacia una pÃ¡gina php. Si no cumple las validaciones, se mostrarÃ¡ un mensaje debajo de cada campo con el error y se pintarÃ¡ el campo con un borde rojo que representarÃ¡ que el campo tiene un error. Si se cumple las validaciones, se enviarÃ¡ a una pÃ¡gina php, en donde se mostrarÃ¡ Ãºnicamente un mensaje que diga â€œBienvenido, Â¡pasaste las validaciones!â€. 
  
 
  
 
 
-6.	Diseñar una interfaz en html que tenga tres botones que diga “Anterior”, “Iniciar”, “Siguiente”, y una imagen. Luego, desde javascript se debe controlar para al hacer clic sobre uno de los botones realice una acción relacionada a una galería de imágenes.
- 
-
--JAVASCRIPT
-imagen1 = '<img src="images/img1.jpg" height="400px" width="450px" />'
-imagen2 = '<img src="images/img2.jpg" height="400px" width="450px" />'
-imagen3 = '<img src="images/img3.jpg" height="400px" width="450px" />'
-imagen4 = '<img src="images/img4.jpg" height="400px" width="450px" />'
-imagen5 = '<img src="images/img5.jpg" height="400px" width="450px" />'
-imagen6 = '<img src="images/img6.jpg" height="400px" width="450px" />'
-imagen7 = '<img src="images/img7.jpg" height="400px" width="450px" />'
-imagen8 = '<img src="images/img8.jpg" height="400px" width="450px" />'
-imagen9 = '<img src="images/img9.jpg" height="400px" width="450px" />'
-imagen10 = '<img src="images/img10.jpg" height="400px" width="450px" />'
-
-var fotos = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10];
-
-var aleatorios = new Array(5);
-var numeroImagen = 0;
-
-
-
-function iniciar() {
-    numeroImagen = 0;
-    aleatoriosR(fotos)
-
-    console.log(aleatorios)
-
-    document.getElementById('anterior').disabled = true;
-
-    document.getElementById('imagen').innerHTML = aleatorios[numeroImagen];
-}
-
-function siguiente() {
-    numeroImagen = numeroImagen + 1;
-
-    console.log(numeroImagen)
-
-    if (numeroImagen == 4) {
-        document.getElementById('siguiente').disabled = true;
-
-    } else {
-
-        if(numeroImagen>0){
-            document.getElementById('anterior').disabled = false;
-        }
-
-        document.getElementById('siguiente').disabled = false;
-
-    }
-
-    document.getElementById('imagen').innerHTML = aleatorios[numeroImagen];
-
-}
-
-function anterior() {
-
-    if (numeroImagen === 0) {
-        document.getElementById('anterior').disabled = true;
-
-    } else {
-
-
-        if(numeroImagen<4){
-            document.getElementById('siguiente').disabled = false;
-
-        }
-        document.getElementById('anterior').disabled = false;
-
-    }
-    console.log(numeroImagen)
-    document.getElementById('imagen').innerHTML = aleatorios[numeroImagen];
-    numeroImagen = numeroImagen - 1;
-
-}
-
-
-function aleatoriosR(elementos) {
-
-    var numaletorios=numerosAleatorios(elementos)
-    console.log(numaletorios[0])
-    console.log(numaletorios[1])
-    console.log(numaletorios[2])
-    console.log(numaletorios[3])
-    console.log(numaletorios[4])
-
-    for (var i = 0; i < 5; i++){
-        aleatorios[i]=fotos[numaletorios[i]]
-    }
-}
-
-function numerosAleatorios() {
-    var cantidadNumeros = 5;
-    var myArray = []
-    while(myArray.length < cantidadNumeros ){
-      var numeroAleatorio = Math.ceil(Math.random()*9);
-      var existe = false;
-      for(var i=0;i<myArray.length;i++){
-        if(myArray [i] == numeroAleatorio){
-            existe = true;
-            break;
-        }
-      }
-      if(!existe){
-        myArray[myArray.length] = numeroAleatorio;
-      }
-    
-    }
-
-    return myArray;
-}
-
-
-
-
-
-
-7.	Se debe tener, un arreglo con los nombres de diez imágenes, previamente descargadas y almacenadas en una carpeta llamada “images”.
- 
+6.	DiseÃ±ar una interfaz en html que tenga tres botones que diga â€œAnteriorâ€, â€œIniciarâ€, â€œSiguienteâ€, y una imagen. Luego, desde javascript se debe controlar para al hacer clic sobre uno de los botones realice una acciÃ³n relacionada a una galerÃ­a de imÃ¡genes.
  
 
 -JAVASCRIPT
-imagen1 = '<img src="images/img1.jpg" height="400px" width="450px" />'
-imagen2 = '<img src="images/img2.jpg" height="400px" width="450px" />'
-imagen3 = '<img src="images/img3.jpg" height="400px" width="450px" />'
-imagen4 = '<img src="images/img4.jpg" height="400px" width="450px" />'
-imagen5 = '<img src="images/img5.jpg" height="400px" width="450px" />'
-imagen6 = '<img src="images/img6.jpg" height="400px" width="450px" />'
-imagen7 = '<img src="images/img7.jpg" height="400px" width="450px" />'
-imagen8 = '<img src="images/img8.jpg" height="400px" width="450px" />'
-imagen9 = '<img src="images/img9.jpg" height="400px" width="450px" />'
-imagen10 = '<img src="images/img10.jpg" height="400px" width="450px" />'
+imagen1Â =Â '<imgÂ src="images/img1.jpg"Â height="400px"Â width="450px"Â />'
+imagen2Â =Â '<imgÂ src="images/img2.jpg"Â height="400px"Â width="450px"Â />'
+imagen3Â =Â '<imgÂ src="images/img3.jpg"Â height="400px"Â width="450px"Â />'
+imagen4Â =Â '<imgÂ src="images/img4.jpg"Â height="400px"Â width="450px"Â />'
+imagen5Â =Â '<imgÂ src="images/img5.jpg"Â height="400px"Â width="450px"Â />'
+imagen6Â =Â '<imgÂ src="images/img6.jpg"Â height="400px"Â width="450px"Â />'
+imagen7Â =Â '<imgÂ src="images/img7.jpg"Â height="400px"Â width="450px"Â />'
+imagen8Â =Â '<imgÂ src="images/img8.jpg"Â height="400px"Â width="450px"Â />'
+imagen9Â =Â '<imgÂ src="images/img9.jpg"Â height="400px"Â width="450px"Â />'
+imagen10Â =Â '<imgÂ src="images/img10.jpg"Â height="400px"Â width="450px"Â />'
 
-var fotos = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, 
-imagen9, imagen10];
+varÂ fotosÂ =Â [imagen1,Â imagen2,Â imagen3,Â imagen4,Â imagen5,Â imagen6,Â imagen7,Â imagen8,Â imagen9,Â imagen10];
 
-8.	La galería de imágenes debe visualizar exclusivamente 5 imágenes.
-var fotos = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, 
-imagen8, imagen9, imagen10];
+varÂ aleatoriosÂ =Â newÂ Array(5);
+varÂ numeroImagenÂ =Â 0;
 
-var aleatorios = new Array(5);
-var numeroImagen = 0;
 
-9.	Cada vez que se haga clic en le botón iniciar se deben escoger de manera aleatoria cinco imágenes de las diez que se mostrarán en la galería de imágenes.
+
+functionÂ iniciar()Â {
+Â Â Â Â numeroImagenÂ =Â 0;
+Â Â Â Â aleatoriosR(fotos)
+
+Â Â Â Â console.log(aleatorios)
+
+Â Â Â Â document.getElementById('anterior').disabledÂ =Â true;
+
+Â Â Â Â document.getElementById('imagen').innerHTMLÂ =Â aleatorios[numeroImagen];
+}
+
+functionÂ siguiente()Â {
+Â Â Â Â numeroImagenÂ =Â numeroImagenÂ +Â 1;
+
+Â Â Â Â console.log(numeroImagen)
+
+Â Â Â Â ifÂ (numeroImagenÂ ==Â 4)Â {
+Â Â Â Â Â Â Â Â document.getElementById('siguiente').disabledÂ =Â true;
+
+Â Â Â Â }Â elseÂ {
+
+Â Â Â Â Â Â Â Â if(numeroImagen>0){
+Â Â Â Â Â Â Â Â Â Â Â Â document.getElementById('anterior').disabledÂ =Â false;
+Â Â Â Â Â Â Â Â }
+
+Â Â Â Â Â Â Â Â document.getElementById('siguiente').disabledÂ =Â false;
+
+Â Â Â Â }
+
+Â Â Â Â document.getElementById('imagen').innerHTMLÂ =Â aleatorios[numeroImagen];
+
+}
+
+functionÂ anterior()Â {
+
+Â Â Â Â ifÂ (numeroImagenÂ ===Â 0)Â {
+Â Â Â Â Â Â Â Â document.getElementById('anterior').disabledÂ =Â true;
+
+Â Â Â Â }Â elseÂ {
+
+
+Â Â Â Â Â Â Â Â if(numeroImagen<4){
+Â Â Â Â Â Â Â Â Â Â Â Â document.getElementById('siguiente').disabledÂ =Â false;
+
+Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â document.getElementById('anterior').disabledÂ =Â false;
+
+Â Â Â Â }
+Â Â Â Â console.log(numeroImagen)
+Â Â Â Â document.getElementById('imagen').innerHTMLÂ =Â aleatorios[numeroImagen];
+Â Â Â Â numeroImagenÂ =Â numeroImagenÂ -Â 1;
+
+}
+
+
+functionÂ aleatoriosR(elementos)Â {
+
+Â Â Â Â varÂ numaletorios=numerosAleatorios(elementos)
+Â Â Â Â console.log(numaletorios[0])
+Â Â Â Â console.log(numaletorios[1])
+Â Â Â Â console.log(numaletorios[2])
+Â Â Â Â console.log(numaletorios[3])
+Â Â Â Â console.log(numaletorios[4])
+
+Â Â Â Â forÂ (varÂ iÂ =Â 0;Â iÂ <Â 5;Â i++){
+Â Â Â Â Â Â Â Â aleatorios[i]=fotos[numaletorios[i]]
+Â Â Â Â }
+}
+
+functionÂ numerosAleatorios()Â {
+Â Â Â Â varÂ cantidadNumerosÂ =Â 5;
+Â Â Â Â varÂ myArrayÂ =Â []
+Â Â Â Â while(myArray.lengthÂ <Â cantidadNumerosÂ ){
+Â Â Â Â Â Â varÂ numeroAleatorioÂ =Â Math.ceil(Math.random()*9);
+Â Â Â Â Â Â varÂ existeÂ =Â false;
+Â Â Â Â Â Â for(varÂ i=0;i<myArray.length;i++){
+Â Â Â Â Â Â Â Â if(myArrayÂ [i]Â ==Â numeroAleatorio){
+Â Â Â Â Â Â Â Â Â Â Â Â existeÂ =Â true;
+Â Â Â Â Â Â Â Â Â Â Â Â break;
+Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â }
+Â Â Â Â Â Â if(!existe){
+Â Â Â Â Â Â Â Â myArray[myArray.length]Â =Â numeroAleatorio;
+Â Â Â Â Â Â }
+Â Â Â Â 
+Â Â Â Â }
+
+Â Â Â Â returnÂ myArray;
+}
+
+
+
+
+
+
+7.	Se debe tener, un arreglo con los nombres de diez imÃ¡genes, previamente descargadas y almacenadas en una carpeta llamada â€œimagesâ€.
+ 
+ 
+
+-JAVASCRIPT
+imagen1Â =Â '<imgÂ src="images/img1.jpg"Â height="400px"Â width="450px"Â />'
+imagen2Â =Â '<imgÂ src="images/img2.jpg"Â height="400px"Â width="450px"Â />'
+imagen3Â =Â '<imgÂ src="images/img3.jpg"Â height="400px"Â width="450px"Â />'
+imagen4Â =Â '<imgÂ src="images/img4.jpg"Â height="400px"Â width="450px"Â />'
+imagen5Â =Â '<imgÂ src="images/img5.jpg"Â height="400px"Â width="450px"Â />'
+imagen6Â =Â '<imgÂ src="images/img6.jpg"Â height="400px"Â width="450px"Â />'
+imagen7Â =Â '<imgÂ src="images/img7.jpg"Â height="400px"Â width="450px"Â />'
+imagen8Â =Â '<imgÂ src="images/img8.jpg"Â height="400px"Â width="450px"Â />'
+imagen9Â =Â '<imgÂ src="images/img9.jpg"Â height="400px"Â width="450px"Â />'
+imagen10Â =Â '<imgÂ src="images/img10.jpg"Â height="400px"Â width="450px"Â />'
+
+varÂ fotosÂ =Â [imagen1,Â imagen2,Â imagen3,Â imagen4,Â imagen5,Â imagen6,Â imagen7,Â imagen8,Â 
+imagen9,Â imagen10];
+
+8.	La galerÃ­a de imÃ¡genes debe visualizar exclusivamente 5 imÃ¡genes.
+varÂ fotosÂ =Â [imagen1,Â imagen2,Â imagen3,Â imagen4,Â imagen5,Â imagen6,Â imagen7,Â 
+imagen8,Â imagen9,Â imagen10];
+
+varÂ aleatoriosÂ =Â newÂ Array(5);
+varÂ numeroImagenÂ =Â 0;
+
+9.	Cada vez que se haga clic en le botÃ³n iniciar se deben escoger de manera aleatoria cinco imÃ¡genes de las diez que se mostrarÃ¡n en la galerÃ­a de imÃ¡genes.
  
 
 -JAVASCRIPT
 
-function iniciar() {
-    numeroImagen = 0;
-    aleatoriosR(fotos)
+functionÂ iniciar()Â {
+Â Â Â Â numeroImagenÂ =Â 0;
+Â Â Â Â aleatoriosR(fotos)
 
-    console.log(aleatorios)
+Â Â Â Â console.log(aleatorios)
 
-    document.getElementById('anterior').disabled = true;
+Â Â Â Â document.getElementById('anterior').disabledÂ =Â true;
 
-    document.getElementById('imagen').innerHTML = aleatorios[numeroImagen];
+Â Â Â Â document.getElementById('imagen').innerHTMLÂ =Â aleatorios[numeroImagen];
 }
 
-function aleatoriosR(elementos) {
+functionÂ aleatoriosR(elementos)Â {
 
-    var numaletorios=numerosAleatorios(elementos)
-    console.log(numaletorios[0])
-    console.log(numaletorios[1])
-    console.log(numaletorios[2])
-    console.log(numaletorios[3])
-    console.log(numaletorios[4])
+Â Â Â Â varÂ numaletorios=numerosAleatorios(elementos)
+Â Â Â Â console.log(numaletorios[0])
+Â Â Â Â console.log(numaletorios[1])
+Â Â Â Â console.log(numaletorios[2])
+Â Â Â Â console.log(numaletorios[3])
+Â Â Â Â console.log(numaletorios[4])
 
-    for (var i = 0; i < 5; i++){
-        aleatorios[i]=fotos[numaletorios[i]]
-    }
+Â Â Â Â forÂ (varÂ iÂ =Â 0;Â iÂ <Â 5;Â i++){
+Â Â Â Â Â Â Â Â aleatorios[i]=fotos[numaletorios[i]]
+Â Â Â Â }
 }
 
-function numerosAleatorios() {
-    var cantidadNumeros = 5;
-    var myArray = []
-    while(myArray.length < cantidadNumeros ){
-      var numeroAleatorio = Math.ceil(Math.random()*9);
-      var existe = false;
-      for(var i=0;i<myArray.length;i++){
-        if(myArray [i] == numeroAleatorio){
-            existe = true;
-            break;
-        }
-      }
-      if(!existe){
-        myArray[myArray.length] = numeroAleatorio;
-      }
-    
-    }
+functionÂ numerosAleatorios()Â {
+Â Â Â Â varÂ cantidadNumerosÂ =Â 5;
+Â Â Â Â varÂ myArrayÂ =Â []
+Â Â Â Â while(myArray.lengthÂ <Â cantidadNumerosÂ ){
+Â Â Â Â Â Â varÂ numeroAleatorioÂ =Â Math.ceil(Math.random()*9);
+Â Â Â Â Â Â varÂ existeÂ =Â false;
+Â Â Â Â Â Â for(varÂ i=0;i<myArray.length;i++){
+Â Â Â Â Â Â Â Â if(myArrayÂ [i]Â ==Â numeroAleatorio){
+Â Â Â Â Â Â Â Â Â Â Â Â existeÂ =Â true;
+Â Â Â Â Â Â Â Â Â Â Â Â break;
+Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â }
+Â Â Â Â Â Â if(!existe){
+Â Â Â Â Â Â Â Â myArray[myArray.length]Â =Â numeroAleatorio;
+Â Â Â Â Â Â }
+Â Â Â Â 
+Â Â Â Â }
 
-    return myArray;
+Â Â Â Â returnÂ myArray;
 }
 
 
 
-10.	Al hacer clic en el botón siguiente y haber llegado a la última imagen disponible, el botón siguiente deberá ser deshabilitado (sólo cuando se ha llegado a la última imagen el botón siguiente deberá estar deshabilitado)
+10.	Al hacer clic en el botÃ³n siguiente y haber llegado a la Ãºltima imagen disponible, el botÃ³n siguiente deberÃ¡ ser deshabilitado (sÃ³lo cuando se ha llegado a la Ãºltima imagen el botÃ³n siguiente deberÃ¡ estar deshabilitado)
 -JAVASCRPIT
 
-function siguiente() {
-    numeroImagen = numeroImagen + 1;
+functionÂ siguiente()Â {
+Â Â Â Â numeroImagenÂ =Â numeroImagenÂ +Â 1;
 
-    console.log(numeroImagen)
+Â Â Â Â console.log(numeroImagen)
 
-    if (numeroImagen == 4) {
-        document.getElementById('siguiente').disabled = true;
+Â Â Â Â ifÂ (numeroImagenÂ ==Â 4)Â {
+Â Â Â Â Â Â Â Â document.getElementById('siguiente').disabledÂ =Â true;
 
-    } else {
+Â Â Â Â }Â elseÂ {
 
-        if(numeroImagen>0){
-            document.getElementById('anterior').disabled = false;
-        }
+Â Â Â Â Â Â Â Â if(numeroImagen>0){
+Â Â Â Â Â Â Â Â Â Â Â Â document.getElementById('anterior').disabledÂ =Â false;
+Â Â Â Â Â Â Â Â }
 
-        document.getElementById('siguiente').disabled = false;
+Â Â Â Â Â Â Â Â document.getElementById('siguiente').disabledÂ =Â false;
 
-    }
+Â Â Â Â }
 
-    document.getElementById('imagen').innerHTML = aleatorios[numeroImagen];
+Â Â Â Â document.getElementById('imagen').innerHTMLÂ =Â aleatorios[numeroImagen];
 
 }
 
 -WEB
  
-11.	Al hacer clic en el botón anterior y haber llegado a la primera imagen disponible,el botón anterior deberá ser deshabilitado (sólo cuando se ha llegado a la últimaimagen y cuando se inicie la galería de imágenes el botón anterior deberá estar deshabilitado)
+11.	Al hacer clic en el botÃ³n anterior y haber llegado a la primera imagen disponible,el botÃ³n anterior deberÃ¡ ser deshabilitado (sÃ³lo cuando se ha llegado a la Ãºltimaimagen y cuando se inicie la galerÃ­a de imÃ¡genes el botÃ³n anterior deberÃ¡ estar deshabilitado)
 -WEB
  
 -JAVASCRPIT
 
-function anterior() {
+functionÂ anterior()Â {
 
-    if (numeroImagen === 0) {
-        document.getElementById('anterior').disabled = true;
+Â Â Â Â ifÂ (numeroImagenÂ ===Â 0)Â {
+Â Â Â Â Â Â Â Â document.getElementById('anterior').disabledÂ =Â true;
 
-    } else {
+Â Â Â Â }Â elseÂ {
 
 
-        if(numeroImagen<4){
-            document.getElementById('siguiente').disabled = false;
+Â Â Â Â Â Â Â Â if(numeroImagen<4){
+Â Â Â Â Â Â Â Â Â Â Â Â document.getElementById('siguiente').disabledÂ =Â false;
 
-        }
-        document.getElementById('anterior').disabled = false;
+Â Â Â Â Â Â Â Â }
+Â Â Â Â Â Â Â Â document.getElementById('anterior').disabledÂ =Â false;
 
-    }
-    console.log(numeroImagen)
-    document.getElementById('imagen').innerHTML = aleatorios[numeroImagen];
-    numeroImagen = numeroImagen - 1;
+Â Â Â Â }
+Â Â Â Â console.log(numeroImagen)
+Â Â Â Â document.getElementById('imagen').innerHTMLÂ =Â aleatorios[numeroImagen];
+Â Â Â Â numeroImagenÂ =Â numeroImagenÂ -Â 1;
 
 }
